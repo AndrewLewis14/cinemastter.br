@@ -1,0 +1,327 @@
+/* Reseta algumas propriedades padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000000;
+    color: #f5f5f5;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Header e Navegação */
+header {
+    background: #1f1f1f;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Seções */
+section {
+    padding: 3rem 2rem;
+    border-bottom: 1px solid #333;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffcc00;
+    text-transform: uppercase;
+}
+
+/* Carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.carousel .slides {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .text {
+    position: absolute;
+    bottom: 45%;
+    left: 5%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 44px;
+    
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1rem;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots-container {
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ffcc00;
+}
+
+/* Grids */
+.movie-grid, .trending-grid, .trailer-grid, .equipe-grid, .evento-grid, .galeria-grid, .avaliacao-grid {
+    gap: 2rem;
+    display: flex; /* Alterado para grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Define a quantidade de colunas */
+}
+
+/* Cards */
+.movie-grid, .trending-grid, .trailer-grid, .equipe-grid, .evento-grid, .galeria-grid, .avaliacao-grid {
+    display: flex;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Cards */
+.movie-card, .trending-card, .trailer-card, .equipe-card, .evento-card, .galeria-card, .avaliacao-card {
+    background: #1f1f1f;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.movie-card:hover, .trending-card:hover, .trailer-card:hover, .equipe-card:hover, .evento-card:hover, .galeria-card:hover, .avaliacao-card:hover {
+    transform: translateY(-10px);
+}
+
+.movie-card img, .trending-card img, .equipe-card img, .galeria-card img {
+    width:100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 1rem;
+    
+}
+.details-btn {
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #e6b800;
+}
+
+/* Enquete */
+#pollForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#pollForm label {
+    font-size: 1.2rem;
+}
+
+#pollForm button {
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#pollForm button:hover {
+    background-color: #e6b800;
+}
+
+#pollResults {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+/* Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-size: 1.2rem;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #1f1f1f;
+    color: #f5f5f5;
+}
+
+form button {
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e6b800;
+}
+
+/* Footer */
+footer {
+    background: #1f1f1f;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    margin: 0;
+    color: #f5f5f5;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel .slides {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.movie-card, .trending-card, .trailer-card, .equipe-card, .evento-card, .galeria-card, .avaliacao-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .carousel .text {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+}
+ 
+
+@media (max-width: 480px) {
+    .carousel-container {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .carousel img {
+        border-radius: 5px;
+    }
+}
